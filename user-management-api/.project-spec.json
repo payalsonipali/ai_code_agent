@@ -1,0 +1,20 @@
+{
+  "technology": "fastapi",
+  "project_name": "user-management-api",
+  "description": "A RESTful API backend providing user management functionality with authentication, authorization, and database integration.",
+  "features": [
+    "api_routes",
+    "database",
+    "orm",
+    "auth",
+    "docker",
+    "testing",
+    "cors",
+    "validation"
+  ],
+  "custom_requirements": [
+    "pydantic"
+  ],
+  "notes": "Includes PostgreSQL database integration, FastAPI for async Python framework, Pydantic for data validation, JWT tokens for authentication, comprehensive testing with pytest, Docker and docker-compose setup, and proper CORS handling.",
+  "confidence": 0.95
+}

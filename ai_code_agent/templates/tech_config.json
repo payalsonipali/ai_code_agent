@@ -1,0 +1,151 @@
+{
+  "technologies": {
+    "nextjs": {
+      "name": "Next.js (React + TypeScript)",
+      "language": "javascript",
+      "packageManager": "npm",
+      "description": "Full-stack React framework with API routes",
+      "features": ["api_routes", "orm", "auth", "docker", "testing", "tailwind"],
+      "defaults": ["typescript", "tailwind", "eslint"],
+      "mainFiles": ["app/page.tsx", "app/layout.tsx", "package.json", "tsconfig.json", ".env.local"],
+      "folders": ["app", "components", "lib", "public", "styles"]
+    },
+    "fastapi": {
+      "name": "FastAPI (Python)",
+      "language": "python",
+      "packageManager": "pip",
+      "description": "Modern async Python web framework",
+      "features": ["database", "auth", "testing", "docker", "cors", "validation"],
+      "defaults": ["pydantic", "sqlalchemy", "pytest"],
+      "mainFiles": ["main.py", "requirements.txt", "Dockerfile", "docker-compose.yml"],
+      "folders": ["app", "app/api", "app/models", "app/schemas", "tests"]
+    },
+    "django": {
+      "name": "Django (Python)",
+      "language": "python",
+      "packageManager": "pip",
+      "description": "Full-featured Python web framework",
+      "features": ["database", "auth", "admin", "testing", "docker", "rest_api"],
+      "defaults": ["djangorestframework", "psycopg2", "python-dotenv"],
+      "mainFiles": ["manage.py", "requirements.txt", "Dockerfile", ".env.example"],
+      "folders": ["project", "app", "app/migrations", "app/templates", "app/static", "tests"]
+    },
+    "spring_boot": {
+      "name": "Spring Boot (Java)",
+      "language": "java",
+      "packageManager": "maven",
+      "description": "Enterprise-grade Java framework",
+      "features": ["database", "auth", "testing", "docker", "rest_api", "security"],
+      "defaults": ["spring-boot-starter-web", "spring-boot-starter-data-jpa"],
+      "mainFiles": ["pom.xml", "src/main/java/Application.java", "Dockerfile"],
+      "folders": ["src/main/java", "src/main/resources", "src/test/java"]
+    },
+    "kotlin": {
+      "name": "Kotlin (Spring Boot / Android)",
+      "language": "kotlin",
+      "packageManager": "gradle",
+      "description": "Modern JVM language with great tooling",
+      "features": ["database", "coroutines", "testing", "docker", "api"],
+      "defaults": ["spring-boot", "kotlinx-coroutines"],
+      "mainFiles": ["build.gradle.kts", "src/main/kotlin/Application.kt", "Dockerfile"],
+      "folders": ["src/main/kotlin", "src/test/kotlin", "src/main/resources"]
+    },
+    "golang": {
+      "name": "Go (Golang)",
+      "language": "go",
+      "packageManager": "go modules",
+      "description": "Efficient, concurrent systems programming",
+      "features": ["api", "database", "testing", "docker", "grpc"],
+      "defaults": ["gin", "gorm", "go-chi"],
+      "mainFiles": ["main.go", "go.mod", "go.sum", "Dockerfile"],
+      "folders": ["cmd", "internal/api", "internal/models", "pkg"]
+    },
+    "rust": {
+      "name": "Rust (with Actix or Axum)",
+      "language": "rust",
+      "packageManager": "cargo",
+      "description": "Systems language with memory safety",
+      "features": ["api", "database", "testing", "docker", "async"],
+      "defaults": ["actix-web", "tokio", "sqlx"],
+      "mainFiles": ["Cargo.toml", "src/main.rs", "Dockerfile"],
+      "folders": ["src", "tests", "benches"]
+    }
+  },
+  "features": {
+    "api_routes": {
+      "name": "API Routes",
+      "description": "REST API endpoint handling",
+      "appliesTo": ["nextjs", "fastapi", "flask", "spring_boot", "kotlin", "golang", "rust"]
+    },
+    "database": {
+      "name": "Database Integration",
+      "description": "SQL database with ORM/query builder",
+      "appliesTo": ["fastapi", "django", "spring_boot", "kotlin", "golang", "rust"]
+    },
+    "orm": {
+      "name": "ORM Support",
+      "description": "Object-Relational Mapping",
+      "appliesTo": ["nextjs", "fastapi", "django", "spring_boot", "kotlin"]
+    },
+    "auth": {
+      "name": "Authentication",
+      "description": "User authentication and authorization",
+      "appliesTo": ["nextjs", "fastapi", "django", "spring_boot", "kotlin", "golang", "rust"]
+    },
+    "docker": {
+      "name": "Docker Support",
+      "description": "Dockerfile and docker-compose configuration",
+      "appliesTo": ["fastapi", "django", "spring_boot", "kotlin", "golang", "rust"]
+    },
+    "testing": {
+      "name": "Testing Framework",
+      "description": "Unit and integration testing setup",
+      "appliesTo": ["nextjs", "fastapi", "django", "spring_boot", "kotlin", "golang", "rust"]
+    },
+    "tailwind": {
+      "name": "Tailwind CSS",
+      "description": "Utility-first CSS framework",
+      "appliesTo": ["nextjs"]
+    },
+    "cors": {
+      "name": "CORS Handling",
+      "description": "Cross-Origin Resource Sharing",
+      "appliesTo": ["fastapi", "django", "spring_boot", "kotlin"]
+    },
+    "validation": {
+      "name": "Request Validation",
+      "description": "Request and data validation",
+      "appliesTo": ["fastapi", "django", "spring_boot", "kotlin"]
+    },
+    "admin": {
+      "name": "Admin Panel",
+      "description": "Built-in admin interface",
+      "appliesTo": ["django"]
+    },
+    "rest_api": {
+      "name": "REST API Framework",
+      "description": "REST API development tools",
+      "appliesTo": ["django", "spring_boot", "kotlin"]
+    },
+    "security": {
+      "name": "Security Features",
+      "description": "Built-in security components",
+      "appliesTo": ["spring_boot"]
+    },
+    "coroutines": {
+      "name": "Async/Coroutines",
+      "description": "Asynchronous programming support",
+      "appliesTo": ["kotlin", "rust"]
+    },
+    "grpc": {
+      "name": "gRPC Support",
+      "description": "gRPC API framework",
+      "appliesTo": ["golang", "rust"]
+    },
+    "async": {
+      "name": "Async Runtime",
+      "description": "Asynchronous runtime",
+      "appliesTo": ["rust", "golang"]
+    }
+  }
+}
